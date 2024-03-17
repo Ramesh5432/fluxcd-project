@@ -5,7 +5,8 @@ metadata:
   namespace: www
 spec:
   rules:
-  - http:
+  - host: <ingress-ip>
+    http:
       paths:
       - path: /nginx
         pathType: Prefix
