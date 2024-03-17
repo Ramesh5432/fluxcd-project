@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: apache2-service
+  namespace: www
 spec:
   selector:
     app: apache2
