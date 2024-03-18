@@ -2,6 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: demo-ingress
+  Namespace: my-system
 spec:
   rules:
     - host: demo.example.com
