@@ -5,7 +5,7 @@ metadata:
   namespace: www
 spec:
   rules:
-  - host: <ingress-ip>
+  - host: app.example.com
     http:
       paths:
       - path: /nginx
