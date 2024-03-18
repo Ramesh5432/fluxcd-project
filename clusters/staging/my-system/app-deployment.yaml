@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: app-deployment
-  Namespace: my-system
+  namespace: my-system
 spec:
   replicas: 2
   selector:
@@ -23,7 +23,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: api-deployment
-  Namespace: my-system
+  namespace: my-system
 spec:
   replicas: 2
   selector:
