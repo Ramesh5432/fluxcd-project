@@ -3,21 +3,24 @@ kind: Ingress
 metadata:
   name: app-ingress
   namespace: www
+  annotations:
+    # If the class annotation is not specified it defaults to "gce".
+    kubernetes.io/ingress.class: "gce"
 spec:
   rules:
-    http:
+  - http:
       paths:
-      - path: /nginx
-        pathType: Prefix
+      - path: /*
+        pathType: ImplementationSpecific
         backend:
           service:
             name: nginx-service
             port:
               number: 80
       - path: /apache2
-        pathType: Prefix
+        pathType: ImplementationSpecific
         backend:
           service:
             name: apache2-service
             port:
-              number: 80
+              number: 20000
